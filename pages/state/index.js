@@ -4,7 +4,9 @@ import styles from '../../styles/State.module.css'
 const tasksMotivation = {
   'code': "Helps on the experience",
   'write': 'Move write help on velocity',
-  'repeat': 'Help a lot on perfection'
+  'repeat': 'Help a lot on perfection',
+  'productivity': 'More experience',
+  'focus': ' Being focused on one thing for a certain period of time allows you to do a better quality of work, more work gets done quicker, and your creative ideas flow easier. Being focused on one task at a time is less stressful on your mind. And being less stressed allows you being happier.'
 }
 
 export default function () {
