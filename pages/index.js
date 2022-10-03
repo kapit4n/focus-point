@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import State from './state'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        Plan the task and see why you are doing this
+        <State />
       </main>
 
       <footer className={styles.footer}>
