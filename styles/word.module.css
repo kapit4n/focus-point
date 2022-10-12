@@ -1,0 +1,25 @@
+.word {
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: linear; 
+}
+
+.small {
+  font-size: 10px;
+}
+
+.medium {
+  font-size: 15px;
+}
+
+.large {
+  font-size: 20px;
+}
+
+
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 30px;}
+}
