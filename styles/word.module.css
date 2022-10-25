@@ -1,8 +1,10 @@
 .word {
   font-weight: bold;
   position: relative;
-  animation: mymove 5s infinite;
-  animation-timing-function: linear; 
+  animation-name: moveRight, moveLeft;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .small {
@@ -19,7 +21,14 @@
 
 
 
-@keyframes mymove {
+@keyframes moveRight {
   from {left: 0px;}
   to {left: 30px;}
+}
+
+
+@keyframes moveLeft {
+  from {left: 30px;}
+  to {left: 0px;}
+
 }

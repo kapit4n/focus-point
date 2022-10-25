@@ -9,25 +9,21 @@ export default function Index({ word, size }) {
 
   useEffect(() => {
     const interval = setInterval(function () {
-      console.log(leftPosition)
-      console.log(topPosition)
-
       setLeftPosition(leftPosition + 100)
       setTopPosition(topPosition + 100)
     }, 1000)
-    
+
     return () => {
       console.log('cler interal')
       clearInterval(interval)
     }
   }, [])
-
+  
   return (
-    <div style={{ left: leftPosition, top: topPosition, backgroundColor: 'blue' }}>
+    <div style={{ left: leftPosition, top: topPosition, backgroundColor: 'transparent' }}>
       <span className={classNames(styles.word, styles[size])}>
         {word}
       </span>
-
     </div>
   )
 }
