@@ -13,9 +13,9 @@ export default function() {
         </div>
       </div>
       <div className={styles.actions}>
-        <button>X</button>
-        <button>R</button>
-        <button>U</button>
+        <button>REMOVE</button>
+        <button>UNFOCUS</button>
+        <button>FINISH</button>
       </div>
     </div>
   )

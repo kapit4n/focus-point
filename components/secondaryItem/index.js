@@ -5,10 +5,12 @@ import styles from '../../styles/components/secondaryItem.module.css'
 export default function Index() {
   return (
     <div className={styles.card}>
-      <div className={styles.description}>Description</div>
+      <div className={styles.description}>
+        Action 1
+      </div>
       <div className={styles.actions}>
-        <button>x</button>
-        <button>focus</button>
+        <button>REMOVE</button>
+        <button>FOCUS</button>
       </div>
     </div>
   )

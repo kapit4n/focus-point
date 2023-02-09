@@ -11,6 +11,10 @@ export default function () {
         <SecondaryItem />
         <SecondaryItem />
         <SecondaryItem />
+        <SecondaryItem />
+        <SecondaryItem />
+        <SecondaryItem />
+        <SecondaryItem />
       </div>
     </div>
   )
