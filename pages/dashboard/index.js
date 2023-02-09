@@ -1,11 +1,17 @@
-import Card from '../../components/card'
+import SecondaryItem from '../../components/secondaryItem'
+import Primaryitem from '../../components/primaryItem'
 
-export default function() {
+import styles from '../../styles/pages/dashboard.module.css'
+
+export default function () {
   return (
     <div>
-      <Card />
-      <Card />
-      <Card />
+      <Primaryitem />
+      <div className={styles.secondaryItemsContent}>
+        <SecondaryItem />
+        <SecondaryItem />
+        <SecondaryItem />
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../styles/components/card.module.css'
+import styles from '../../styles/components/secondaryItem.module.css'
 
 export default function Index() {
   return (
