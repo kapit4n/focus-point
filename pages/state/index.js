@@ -48,7 +48,7 @@ export default function () {
       </div>
       <div style={{ width: '300px', height: '100px' }}>
         Motivation
-        <input onBlur={(e) => handleMotivation(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleMotivation(e)} />
+        <input onBlur={(e) => handstylesleMotivation(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleMotivation(e)} />
       </div>
 
       <div style={{ color: 'green', fontSize: '100px' }}>

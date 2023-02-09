@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid darkblue;
+  background-color: aliceblue;
+}
+
+.actions {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.description {
+  font-size: 30px;
+  font-weight: 800;
+}
