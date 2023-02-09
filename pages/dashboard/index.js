@@ -1,5 +1,6 @@
 import SecondaryItem from '../../components/secondaryItem'
 import Primaryitem from '../../components/primaryItem'
+import History from '../../components/history'
 
 import styles from '../../styles/pages/dashboard.module.css'
 
@@ -16,6 +17,7 @@ export default function () {
         <SecondaryItem />
         <SecondaryItem />
       </div>
+      <History />
     </div>
   )
 }

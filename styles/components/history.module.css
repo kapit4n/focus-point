@@ -1,0 +1,16 @@
+.history {
+  margin: 2rem 0;
+}
+
+.title {
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.historyItem {
+  background-color: azure;
+  color: gray;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
