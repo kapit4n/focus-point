@@ -1,5 +1,8 @@
 .history {
   margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid black;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .title {
@@ -8,9 +11,15 @@
   font-weight: 700;
 }
 
+.historyListContainer {
+  padding-inline-start: 0;
+}
+
 .historyItem {
   background-color: azure;
   color: gray;
   margin: 1rem 0;
-  padding: 1rem 0;
+  list-style: none;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

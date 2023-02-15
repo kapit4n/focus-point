@@ -15,7 +15,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        The main tool to stay focused is to plan the task and motivate its development.
+        
       </footer>
     </div>
   )

@@ -6,7 +6,8 @@
   width: 20rem;
   padding: 1rem;
   border: 1px solid darkblue;
-  background-color: aliceblue;
+  background-color: #7B8FA1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .actions {
