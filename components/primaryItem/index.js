@@ -1,15 +1,14 @@
 import styles from '../../styles/components/primaryItem.module.css';
 
-export default function() {
+export default function({item}) {
   return (
     <div className={styles.primaryItem}>
       <div className={styles.body}>
         <div className={styles.title}>
-          Focus Item
+          {item?.name}
         </div>
         <div className={styles.description}>
-          This is an item where I will need to work for 3hours
-          approximately 
+        {item?.description}
         </div>
       </div>
       <div className={styles.actions}>
