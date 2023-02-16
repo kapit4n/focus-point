@@ -9,7 +9,11 @@ export function ItemService() {
       return axios.get(url)
     },
     getById: (id) => {},
-    create: (item) => {},
-    update: (item) => {}
+    create: (item) => {
+
+    },
+    update: (item) => {
+      return axios.put(url + item.id + "/", item)
+    }
   })
 }

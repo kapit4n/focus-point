@@ -1,6 +1,6 @@
 import styles from '../../styles/components/primaryItem.module.css';
 
-export default function({item}) {
+export default function({item, onUnFocus}) {
   return (
     <div className={styles.primaryItem}>
       <div className={styles.body}>
@@ -13,7 +13,7 @@ export default function({item}) {
       </div>
       <div className={styles.actions}>
         <button>REMOVE</button>
-        <button>UNFOCUS</button>
+        <button onClick={onUnFocus}>UNFOCUS</button>
         <button>FINISH</button>
       </div>
     </div>

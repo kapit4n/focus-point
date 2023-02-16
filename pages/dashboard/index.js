@@ -11,47 +11,46 @@ export default function () {
 
   const [items, setItems] = React.useState([])
   const [mainItem, setMainItem] = React.useState({})
+  const [reloadOneMoreTime, setReloadOneMoreTime] = React.useState(0)
 
   React.useEffect(() => {
     ItemService().getAll().then(resp => {
       console.log(resp.data)
-      setItems(resp.data)
+      setItems(resp.data.filter(i => !i.focus))
     })
-  }, [])
+  }, [mainItem])
 
   React.useEffect(() => {
     ItemService().getAll().then(resp => {
       console.log(resp.data)
-      setMainItem(resp.data.shift())
+      setMainItem(resp.data.filter(i => i.focus).shift())
     })
-  }, [])
-
-
+  }, [reloadOneMoreTime])
 
   const updateItem = async (item) => {
-    ItemService.update(item).then(resp => {
-      console.log(resp)
-    })
+    return ItemService().update(item)
   }
 
-  const focus = item => {
-    update({...item, focus: true}).then(console.log)
+  const onFocusItem = async (item, mainItem) => {
+    await updateItem({...item, focus: true})
+    if (mainItem) {
+      await updateItem({...mainItem, focus: false})
+    }
+    setMainItem(item)
   }
 
   const unFocus = item => {
     if (item) {
-      update({...item, focus: false}).then(console.log)
+      updateItem({...item, focus: false})
+      setReloadOneMoreTime(reloadOneMoreTime + 1)
     }
   }
 
   return (
     <div>
-      <Primaryitem item={mainItem}/>
+      <Primaryitem item={mainItem} onUnFocus={() => unFocus(mainItem)}/>
       <div className={styles.secondaryItemsContent}>
-        {items.map(item => <SecondaryItem item={item} focus={() => {
-          focus(item)
-          unFocus(mainItem)
-        }}/> )}
+        {items.map(item => <SecondaryItem key={item.id} item={item} onFocus={() => onFocusItem(item, mainItem)}/> )}
       </div>
       <History />
     </div>
